@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#D9F6FB">
+
+    <!-- dip를 더 많이 씀. dip가 dp임. 핸드폰 해상도 상관없이 비율을 이용하는 단위 : view사이즈
+    sp: 글씨 사이즈-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello world"
+        android:textSize="30sp"
+        android:textColor="#B2CCFF"
+        android:textStyle="bold|italic"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#6799FF"/>
+
+    <!--visibility 속성-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <!--배경이미지-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="nice"
+        android:background="@drawable/ic_launcher_foreground"/>
+
+    <!--정렬 그냥 그래비티는 액자 안의 글씨의 정렬, 레이아웃그래비티는 액자자체의 정렬-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="gravity"
+        android:gravity="right"
+        android:background="#FFFFFF"
+        android:padding="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nice"
+        android:background="#FCC9FF"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!--autoLink속성-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="www.naver.com"
+        android:autoLink="web"/>
+
+    <!--글씨를 xml리소스(string.xml)로 설정하기-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bottom_sheet_behavior"/>
+
+    <!--글꼴(폰트)지정-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nice to meet you"
+        android:textSize="24sp"/>
+</LinearLayout>

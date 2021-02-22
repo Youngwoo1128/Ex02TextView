@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!--table은 잘 안씀. 위아래병합이 안되고, 여러줄에서 동시에 줄이고늘리고도 안돼=>그래서 GridLayout나옴-->
+    <!--tableLayout은 기본적으로 LinearLayout을 상속받았음. 따라서 View들이 겹치지 않아-->
+
+    <!--기본적으로 orientation이 vertical임-->
+    <TableLayout
+        android:stretchColumns="*"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <!--TableLayout안에 있는 뷰들은 별도의 width, height을 지정하지 않아도 에러아님-->
+        <!--안쓰면 기본적으로 wrap_content 사이즈가 됨-->
+
+        <!--TableRow하나가 한줄임-->
+        <TableRow>
+            <Button android:text="1"/>
+            <Button/>
+            <Button/>
+        </TableRow>
+        <TableRow>
+            <Button/>
+            <Button android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+            <Button/>
+            <!--칸합치기..근데 세로는 안합쳐져..-->
+            <Button android:layout_span="2"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:shrinkColumns="*"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <Button android:text="1"/>
+            <Button android:text="2"/>
+            <Button android:text="3"/>
+            <Button android:text="4"/>
+            <Button android:text="5"/>
+        </TableRow>
+
+        <TableRow>
+            <Button android:id="@+id/b1"/>
+            <Button android:id="@+id/b2"/>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
